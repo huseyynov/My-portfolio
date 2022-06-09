@@ -8,25 +8,44 @@
 	--primary-red: #ef4035;
 	--primary-hover-red: #f33501;
 	--primary-black:#000;
-	--primary-transparent-black: rgba(0, 0,0, .7);
+	--primary-transparent-black: rgba(0,0,0,0.7);
 	--primary-green: rgb(0,255,0);
 }
 
+/* Navbarin kodlari */
+
+.logo {
+	width: 4rem;
+}
+
+nav {
+	z-index: 9999;
+}
+
 .nav-link{
-	color: #fff !important;
+	color: var(--primary-white) !important;
+	font-size: 1.2rem;
+	letter-spacing: 0.0375rem;
+	margin: 0 0.75rem;
 }
 
 nav ul li{
 	text-transform: uppercase;
 }
 
-.navbar-nav > li > a:hover ,
-.navbar-nav > li > a:focus
-{
-	border-top: .1875rem solid var(--primary-orange);
+/* .navbar-nav > li {
+	border: 0.1875rem solid;
+} */
 
+
+.navbar-nav > li> a:hover ,
+.navbar-nav > li>a:focus{
+	border-bottom: 0.1875rem solid var(--primary-orange);
+	display: inline-block;
+	padding-bottom: 5px;
 }
 
+/* Header komponenti */
 
 .header-wrapper {
 	position: relative;
@@ -59,3 +78,167 @@ nav ul li{
 	font-size: 2rem;
 	color: var(--primary-white);
 }
+
+/* Experience */
+
+.experience {
+    padding: .7rem;
+}
+
+.experience-wrapper {
+    position: relative;
+    padding: 3.2rem 0;
+    overflow: hidden;
+}
+
+.experience h1 {
+    text-transform: uppercase;
+    color: var(--primary-orange);
+}
+
+.experience-wrapper::before {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    content: '';
+    width: 0.125rem;
+    height: 100%;
+    background-color: var(--primary-grey);
+    z-index: 1;
+    margin-left: -0.125rem;
+}
+
+.timeline-block {
+    width: calc(50% + .5rem);
+    display: flex;
+    
+    justify-content: space-between;
+    clear: both;
+}
+
+.timeline-block-right {
+    float:right;
+}
+
+.timeline-block-left {
+    float: left;
+    direction: rtl;
+}
+
+.marker {
+    width: 1rem;
+    height: 1rem;
+    background-color: var(--primary-orange);
+    border: 0.3125rem solid var(--primary-dark);
+    border-radius: 50%;
+    z-index: 3;
+    margin-top: 0.625rem;
+}
+
+.timeline-content {
+    width: 95%;
+   direction: ltr;
+    padding: 0 0.9375rem;
+    color: var(--primary-dark-grey);
+}
+
+.timeline-content p {
+    color: var(--primary-dark);
+}
+
+@media(max-width:765px) {
+    .experience .container {
+        padding-left: 0;
+    }
+
+    .experience-wrapper::before {
+        left: 0.5rem;
+        margin-bottom: 1.875rem;
+    }
+
+    .timeline-block-right {
+        float: none;
+        width: 100%;
+    }
+
+    .timeline-block-left {
+        float: none;
+        direction: ltr;
+        width: 100%;
+
+    }
+}
+
+/* Contac me */
+
+/* contact us komponenti stil */
+
+.contacts {
+    background-color: var(--primary-dark);
+    padding:3rem 0;
+}
+
+.contacts h1 {
+    color: var(--primary-hover-red);
+    padding-left: 1.3rem 0;
+    text-transform: uppercase;
+}
+
+.contacts p {
+    color: var(--primary-light-grey);
+    font-size: 1.2rem;
+}
+
+/*  contacts input */
+
+.contacts input, .contacts textarea {
+    background:none;
+    border: none;
+    resize: none;
+    box-sizing: border-box;
+    color: var(--primary-hover-red);
+    outline: none !important;
+}
+
+.contacts input:focus, .contacts textarea:focus{
+    background:transparent;
+    border-bottom: 0.125rem solid var(--primary-dark-grey);
+}
+
+.contacts textarea {
+    height: 12.2rem !important;
+}
+
+.contact-btn {
+    margin: 1rem 0 0 0;
+}
+
+.btn-main-offer {
+    border: 1px solid var(--primary-red);
+    margin: 2rem;
+    padding: 0.625rem 0.75rem 0.75rem 0.75rem;
+    color:var(--primary-white);
+    background:none;
+
+}
+
+.btn-main-offer:hover {
+    background-color: var(--primary-hover-red);
+    transition: 1s ease-in-out;
+}
+
+.line {
+    position: relative;
+    top: -0.7rem;
+    width: 0;
+    height: 0.125rem;
+    background-color: var(--primary-orange);
+    display: inline-block;
+}
+
+input:focus+.line, textarea:focus+.line {
+    width: 100%;
+    transition: width .5s ease-in-out;
+}
+
+/* footer stilllleriiiii */
